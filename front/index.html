@@ -1,14 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Proyecto de M2</h1>
+<html lang="es">
 
-    <script src="./scripts/tempData.js"></script>
-    <script src="./scripts/index.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">cinegary</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="imagenes/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre Mi Proyecto</a></li>
+                    <li><a href="#">Historia del Cine</a></li>
+                    <li><a href="#">Webs Recomendadas</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-1">Login</a>
+        </div>
+        <div class="header-content container">
+            <div class="header-1">
+                <img src="imagenes/venom.png" alt="">
+                <a href="#" class="btn-2">Ver ahora</a>
+            </div>
+            <div class="header-2">
+                <h1>Las mehires <br> peliculas</h1>
+                <img src="imagenes/play.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <section class="movies container">
+        <h2>Peliculas</h2>
+        <hr>
+        <div class="box-container-1" id="box-11">
+
+        </div>
+    </section>
+    <footer class="footer container">
+        <h3>cinegary</h3>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre Mi Proyecto</a></li>
+            <li><a href="#">Historia del Cine</a></li>
+            <li><a href="#">Webs Recomendadas</a></li>
+        </ul>
+    </footer>
+    <script src="/front/scripts/tempData.js"></script>
+    <script src="/front/scripts/index.js"></script>
+</body>
+
 </html>
