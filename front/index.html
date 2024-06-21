@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peliculas</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="icon"
-        href="/front/imagenes/camara-de-video.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./imagenes/camara-de-video.png" type="image/png"/>
+    <script src="./webpack.config.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="/front/scripts/webpack.config.js"></script>
+    <title>Películas</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header class="header">
@@ -18,42 +21,44 @@
             <p href="#" class="logo">cinegary</p>
             <input type="checkbox" id="menu" />
             <label for="menu">
-                <img src="imagenes/menu.png" class="menu-icono" alt="menu">
+                <img src="./imagenes/menu.png" class="menu-icono" alt="menu">
             </label>
             <nav class="navbar">
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="/front/pages/sobremiproyecto.html">Sobre Mi</a></li>
-                    <li><a href="https://es.wikipedia.org/wiki/Historia_del_cine" target="_blank">Historia del Cine</a></li>
+                    <li><a href="./pages/sobremiproyecto.html" target="_blank">Sobre Mi</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Historia_del_cine" target="_blank">Historia del Cine</a>
+                    </li>
                 </ul>
             </nav>
             <a href="#" class="btn-1">Login</a>
         </div>
         <div class="header-content container">
             <div class="header-1">
-                <img src="imagenes/venom.png" alt="">
+                <img src="./imagenes/venom.png" alt="venon">
                 <a href="#" class="btn-2">Ver ahora</a>
             </div>
             <div class="header-2">
-                <h1>Las mejores <br> peliculas</h1>
-                <img src="imagenes/play.png" alt="">
+                <h1>Las mejores <br> películas</h1>
+                <img src="./imagenes/play.png" alt="play">
             </div>
         </div>
     </header>
     <section class="movies container">
-        <h2>Peliculas</h2>
+        <h2>películas</h2>
         <hr>
-        <div class="box-container-1" id="box-11"> </div> 
+        <div class="box-container-1" id="box-11"></div>
     </section>
     <footer class="footer container">
         <h3>cinegary</h3>
         <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="/front/pages/sobremiproyecto.html">Sobre Mi Proyecto</a></li>
+            <li><a href="./pages/sobremiproyecto.html" target="_blank">Sobre Mi Proyecto</a></li>
             <li><a href="https://es.wikipedia.org/wiki/Historia_del_cine" target="_blank">Historia del Cine</a></li>
         </ul>
     </footer>
-    <script src="/front/scripts/tempData.js"></script>
-    <script src="/front/scripts/index.js"></script>
+    <!-- <script src="/PM2-GCasasWong/front/scripts/tempData.js"></script> 
+    <script src="/PM2-GCasasWong/front/scripts/index.js"></script> -->
+    <script src="./dist/bundle.js"></script>
 </body>
 </html>

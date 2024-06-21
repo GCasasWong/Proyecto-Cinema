@@ -54,16 +54,17 @@ describe('CarritoCompra', () => {
     });
 });
 
-    // it()
-
-    
-
     it('validate that carritoCompra has a method aplicarDescuento', () => {
         expect(carrito.aplicarDescuento).toBeDefined();
         expect(typeof carrito.aplicarDescuento).toBe("function")
-    })
+    });
 
+    it("Deberia calcular el descuento en base al parametro recibido y retornar el nuevo precio", () => {
+        expect(carrito.aplicarDescuento(10)).toEqual(carrito.calcularTotal() - carrito.calcularTotal() * (10/100)
+        );
+    });
 });
+
 
 
 

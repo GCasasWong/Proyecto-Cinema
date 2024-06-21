@@ -20,7 +20,7 @@ body {
 }
 
 .header {
-    background-image: url(/front/imagenes/bg.jpg);
+    background-image: url('/front/imagenes/bg.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -147,25 +147,17 @@ hr {
     margin-bottom: 40px;
 }
 
-.box-container-1,
-.box-container-2,
-.box-container-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.box-container-1{
+    display: flex;
+    flex-wrap: wrap;
     gap: 40px;
+    width: 80%;
+    margin: auto;
 }
 
 .box-1 {
     border-radius: 5px;
-    z-index: 1000;
-    display: none;
-}
-
-.box-1:nth-child(1),
-.box-1:nth-child(2),
-.box-1:nth-child(3),
-.box-1:nth-child(4) {
-    display: inline-block;
+    display: flex;
 }
 
 .load-more {

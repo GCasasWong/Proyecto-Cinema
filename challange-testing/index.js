@@ -22,6 +22,7 @@ class CarritoCompra {
         }
 
         const total = this.calcularTotal();
+        
         return total - (total * discount / 100);
     }
 }

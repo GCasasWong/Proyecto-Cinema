@@ -5,14 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "build": "webpack"
+    "build": "webpack -w",
+    "dev": "nodemon --exec 'npm run build && live-server'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.2",
-    "webpack": "^5.90.3",
+    "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "nodemon": "^3.1.0"
   }
 }
