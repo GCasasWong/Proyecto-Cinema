@@ -1,8 +1,7 @@
 const renderData = require( './renderData' );
-
-const URL = 'http://localhost:3000/movies';
-
+const {clearForm,createMovie} = require('./formulario');
 const axios = require("axios");
+const URL = 'http://localhost:3000/movies';
 
 const getMovies = async () => {
 
@@ -15,4 +14,10 @@ const getMovies = async () => {
     }
 }
 
-getMovies();
+const contenedor = document.getElementById('box-11');
+if(contenedor){
+    getMovies();
+}
+
+document.getElementById('ButtonClear').addEventListener('click',clearForm);
+document.getElementById('submitForm').addEventListener('click',createMovie);
