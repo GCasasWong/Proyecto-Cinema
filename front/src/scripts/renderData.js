@@ -14,11 +14,13 @@ const renderData = (tempData) => {
 
                 <p class="card-text">Director: ${pelicula.director}</p>
 
-                <p class="card-text">Duración: ${pelicula.duration}</p>
+                <p class="card-text">Duration: ${pelicula.duration}</p>
 
-                <p class="card-text">Género: ${pelicula.genre.join(", ")}</p>
+                <p class="card-text">Year: ${pelicula.year}</p>
 
-                <p class="card-text">Calificación: ${pelicula.rate}</p>
+                <p class="card-text">Genre: ${pelicula.genre.join(", ")}</p>
+
+                <p class="card-text">Rate: ${pelicula.rate}</p>
 
                 <a href="#" class="btn btn-primary">Ver aquí</a>
 
