@@ -374,3 +374,19 @@ a {
     text-decoration: none;
     color: white;
 }
+
+#movieForm{
+    width: 80%;
+    margin: auto;
+}
+
+.contenButton{
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.contenButton button{
+    width: 120px;
+}
