@@ -30,35 +30,50 @@ function convertToHoursAndMinutes(minutes) {
     return `${hrs}H ${mins}MIN`;
 }
 
-async function createMovie (movie) {
+async function createMovie(event) {
     event.preventDefault();
+    
+    const isNumber = (value) => /^\d+$/.test(value);
+
     const title = document.getElementById('ActivityTitle').value;
-    const year = document.getElementById('ActivityYear').value;
+    const yearValue = document.getElementById('ActivityYear').value;
     const director = document.getElementById('ActivityDirector').value;
-    const duration = document.getElementById('ActivityDuration').value;
+    const durationValue = document.getElementById('ActivityDuration').value;
     const genero = document.getElementById('ActivityGenre').value;
     const rate = document.getElementById('ActivityRate').value;
     const poster = document.getElementById('ActivityPoster').value;
 
-    const genre= genero.split(' ').filter(word => word.length >= 2).join(',');
-    const isNumber = (value) => /^\d+$/.test(value);
+    const year = isNumber(yearValue) ? yearValue : null;
+    const duration = isNumber(durationValue) ? convertToHoursAndMinutes(durationValue) : null;
+    const genre = genero.split(' ').filter(word => word.length >= 2).join(',');
 
-    if (title && isNumber(year) && director && isNumber(duration) && genre && rate && poster) {
-        const convertedDuration = convertToHoursAndMinutes(duration);
-        const data = {title, year,director,duration: convertedDuration,genre,rate,poster};
-        try{
-            await verMovie(data);
-            alert('Pelicula creada exitosamente');
-            clearForm();
-            
-    } catch(error){
+    const camposRequeridosObj = {title, year, director, duration, genre, rate, poster};
+    const camposRequeridos = ["title", "year", "director", "duration", "genre", "rate", "poster"];
+    const camposFaltantes = camposRequeridos.filter(campo => !camposRequeridosObj[campo]);
 
+    if (camposFaltantes.length > 0) {
+        return alert(`Faltan los siguientes campos por llenarse: ${camposFaltantes.join(",")}`);
     }
 
-    } else {
-        alert('Por favor, complete todos los campos correctamente');
+    const data = {
+        title,
+        year,
+        director,
+        duration,
+        genre,
+        rate,
+        poster
+    };
+
+    try {
+        await verMovie(data);
+        alert('Película creada exitosamente');
+        clearForm();
+    } catch (error) {
+        alert("Error al crear la película");
     }
 }
+
 
 module.exports = {clearForm,createMovie};
 

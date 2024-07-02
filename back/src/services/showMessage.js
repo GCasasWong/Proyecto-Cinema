@@ -1,14 +1,20 @@
-const Movie = require('../models/movie');
+const Movie = require('../models/Movie');
 
 module.exports = {
     getAllMovies: async () => {
-      const movies = await Movie.find();
-      return movies;
+      try{
+        return await Movie.find();
+      } catch (error) {
+        throw error;
+      }
     },
 
-    createMovie: async (movie) => {
+    createMovie: async (movie) => { 
+      try{
         const newMovie = await Movie.create(movie);
         return newMovie;
+      }catch(error){
+        throw error;
+      }
     }
-
 };

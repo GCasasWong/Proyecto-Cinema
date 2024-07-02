@@ -10,6 +10,6 @@ const movieSchema = new mongoose.Schema({
     poster: String
 });
 
-const Movie = mongoose.model('Movie', movieSchema);
+const movie = mongoose.model('Movie', movieSchema);
 
-module.exports = Movie;
+module.exports = movie;
