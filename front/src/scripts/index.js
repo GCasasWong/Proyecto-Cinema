@@ -20,4 +20,5 @@ if(contenedor){
 }
 
 document.getElementById('ButtonClear').addEventListener('click',clearForm);
-document.getElementById('submitForm').addEventListener('click',createMovie);
+const submitButton = document.getElementById('submitForm');
+submitButton?.addEventListener('click',createMovie);
